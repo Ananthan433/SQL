@@ -15,11 +15,18 @@ insert into BOOK values('B003','I Am Malala','Malala Yousafzai',660);
 insert into BOOK values('B004','The Story of My Experiments with Truth','Mahatma Gandhi',1000);
 insert into BOOK values('B005','Mein Kampf','Adolf Hitler',750);
 
+-- Table of Publishers
 create table PUBLISHER
  (
     pubid varchar(5) primary key,
 pubname varchar(20),
-bookid varchar(5) , 
-FOREIGN KEY (bookid) REFERENCES BOOK(bookid)
+bookid varchar(5) references BOOK(bookid)
 
 );
+
+-- Inserting Values to Publisher Table
+insert into publisher values ('P001','DC books','B001');
+insert into publisher values ('P002','Mathrubhumi','B002');
+insert into publisher values ('P003','Manorama','B003');
+insert into publisher values ('P004','Deepika','B004');
+insert into publisher values ('P005','Book media','B005');
